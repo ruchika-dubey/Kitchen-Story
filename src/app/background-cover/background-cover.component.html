@@ -1,0 +1,60 @@
+
+<div class="container-fluid">
+  <div class="bd-example">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="http://cyneats.com/wp-content/uploads/2018/04/CynEats-photography-3.jpg" class="d-block w-100">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Our Story</h5>
+            <p >One of the leading casual dining chains in India, the concept of “over the table barbeque” live grills embedded in dining tables – allowing guests to grill their own barbecue’s right at their tables.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="http://cyneats.com/wp-content/uploads/2014/05/KITCHENSTORY.jpg" class="d-block w-100" >
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Our core values</h5>
+            <p>Our core values prioritise being customer-focused to provide excellent products and service and employee-focused by maintaining a superior quality work environment. Our Company was ranked 13th among best companies to work for in India across all categories by Economic Times “Great Places to Work” survey for 2019 conducted by Great Places to Work Institute. Our Company was also voted among the top ten employers within the Indian retail industry for 2019 by Great Places to Work and 14th among best large workplaces in Asia by Great Places to Work Institute.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://b.zmtcdn.com/data/pictures/4/18924734/ea908a9a7ec3c0496532936dcc58ef6c.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*" class="d-block w-100" >
+          <div class="carousel-caption d-none d-md-block">
+            <h5>All You Can Eat</h5>
+            <p>Our fixed price ‘all you can eat’ concept at our Barbeque Nation Restaurants offers our customers a varying spread of consistently delicious food at a value-oriented price in a pleasant and casual dining environment. We believe that barbeque cuisine is distinctively attractive as compared with other dining options due to its DIY and cooked-at-the-table nature and the flexibility and fun of mixing and matching a wide variety of meats, vegetables, sauces and condiments to create dishes according to each diner’s individual tastes and preferences. In addition, fixed price dining is very popular amongst relatively larger groups, due to customers’ perception of value for money and the comfort of certainty over the bill amount irrespective of varying individual appetites and consumption
+
+                    Our Barbeque Nation Restaurants typically offer customers at least five vegetarian and five non-vegetarian largely pre-cooked appetisers they can season and barbeque on a grill embedded in their table, an all-you-can-eat main course buffet and a selection of desserts..</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+    <h1>Our Products</h1>
+   <div class="row">
+    <div class="card col-3 m-2" style="width: 18rem;" *ngFor = "let items of get_all_product_items; let i = index">
+        <img class="card-img-top" src={{items.imglink}} alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{items.productname}}</h5>
+          <p class="card-text">RS.{{items.productprice}}</p>
+          <a  class="btn btn-outline-primary btn-lg btn-block" id = {{i}}  (click) = "buy(items.productname,items.imglink,items.productprice)">Buy</a>
+          <!-- <a  class="btn btn-outline-primary btn-lg btn-block" id = "{{i}}"  (click) = "get(i)" style="display: none;">Remove</a> -->
+        </div>
+      </div>
+   </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

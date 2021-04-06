@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="row">
+        
+        <div class="col-md-6">
+            <div class="container pt-5 div-container-alignment">
+                <h1 style="color:rgb(0, 110, 255);font-family: sans-serif;">Register</h1>
+            </div>
+            <form class="m-5" [formGroup]="registerForm" (ngSubmit)="handleFormSubmmit($event)">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="text" formControlName="name" class="form-control" id="exampleInputText1" aria-describedby="emailHelp" placeholder="Enter your name">
+                   </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+                  
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your Password">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Confirm Password</label>
+                    <input type="password" formControlName="cnf_password" class="form-control" id="exampleInputPassword2" placeholder="Retype Password">
+                  </div>
+               
+                <br>
+                
+               
+                <button class="btn btn-outline-primary btn-lg btn-block">Register!</button>
+              </form>
+        </div>
+    </div>
+</div>
